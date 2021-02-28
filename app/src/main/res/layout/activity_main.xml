@@ -1,18 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_height="wrap_content"
+    android:background="@drawable/globos"
+    tools:context=".MainActivity"
+    android:layout_gravity="center"
+    android:paddingLeft="50dp"
+    android:paddingRight="50dp">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingTop="50dp"
+        android:padding="20dp">
+        <ImageView
+            android:id="@+id/player_image"
+            android:layout_width="358dp"
+            android:layout_height="346dp"
+            app:srcCompat="@drawable/morty"
+            android:paddingBottom="20dp"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <EditText
+            android:id="@+id/name_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:background="@drawable/fondoet"
+            android:gravity="center"
+            android:hint="@string/name_edit_text"
+            android:textSize="24sp"
+            android:inputType="text" />
+
+        <Button
+            android:layout_width="266dp"
+            android:layout_height="56dp"
+            android:background="@drawable/fondoboton"
+            android:text="@string/text_in_button"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:textColor="@color/cardview_light_background"
+            android:onClick="playOnClick"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:paddingTop="20dp">
+
+            <TextView
+                android:id="@+id/score_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="59dp"
+                android:background="@drawable/fondoet" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>
